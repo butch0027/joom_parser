@@ -80,7 +80,7 @@ async def run() -> None:
     # long polling
     log.info("Стартую polling…")
     runner = app.run_polling(allowed_updates=Update.ALL_TYPES, stop_signals=None, close_loop=False, poll_interval=1.5)
-    # app.run_polling синхронно блокирует; оборачиваем в таск
+    # app.run_polling синхронно блокирует; оборачиваем в таска
     task = asyncio.create_task(asyncio.to_thread(runner))
     await stop_event.wait()
     log.info("Остановка…")
