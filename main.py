@@ -10,7 +10,7 @@ def parse_response(response):
     for item in items_in_basket:
         if item['id'] == '69074757c6604d1065cc0f6e':
             print(item['price']['amount'])
-            pope = 123
+            pope = 12
 
 def get_price_data():
 
