@@ -14,12 +14,12 @@ def parse_response(response):
 
 def get_price_data():
 
-    base = Path(__file__).resolve().parent
-    token_path = base / "token" / "token.txt"
-    with open(token_path, "r", encoding="utf-8") as f:
-        cookies = f.read().strip()
+    # base = Path(__file__).resolve().parent
+    # token_path = base / "token" / "token.txt"
+    # with open(token_path, "r", encoding="utf-8") as f:
+    #     cookies = f.read().strip()
     headers = {
-        'authorization': cookies,
+        # 'authorization': cookies,
         'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36'
     }
     json_data = {
