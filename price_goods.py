@@ -7,7 +7,7 @@ def parse_response(response):
     items_in_basket = json_response['payload']['cartItems']
     for item in items_in_basket:
         if item['id'] == '69074757c6604d1065cc0f6e':
-            print(item['price']['amount'])
+            return(item['price']['amount'])
 
 def get_price_data():
     base = Path(__file__).resolve().parent
@@ -25,9 +25,9 @@ def get_price_data():
     }
 
     response = requests.post('https://www.joom.ru/api/1.1/cart/get', headers=headers, json=json_data)
-    print(response.text)
+    # print(response.text)
     if response.status_code == 200:
-        parse_response(response)
+        return parse_response(response)
 
 if __name__ == "__main__":
     get_price_data()
